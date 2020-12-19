@@ -1,0 +1,113 @@
+.nav{
+    position: absolute;
+    margin-top: 10px;
+    left: 10px;
+    button{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: none;
+        outline: none; 
+        cursor: pointer;
+    }
+
+    .falist{
+        font-size: 170%;
+    }
+
+    .hoverEffect{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        z-index: -1;
+        transform: scale(1);
+        transition: 0.3s transform ease;
+    }
+
+    .displayNav{
+        background-color:white;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .active{
+        animation: openDisplay 1s;
+        animation-fill-mode: forwards;  
+    }
+    .inactive{
+        animation: closeDisplay 1s;
+        animation-fill-mode: forwards;  
+    }
+}
+
+nav:hover{
+    .hoverEffect{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes openDisplay{
+    0%{
+        width: 0px;
+        height: 50px;
+        left: 0vw;
+    }
+    30%{
+        width: 34vw;
+    }
+    50%{
+        width: 30vw;
+        height: 51px;
+
+    }
+    60%{
+        border-bottom: 0px solid $primary-color;
+    }
+    85%{
+        height: 550px;
+    }
+    100%{
+        width: 30vw;
+        height: 500px;
+        border-bottom: 10px solid $primary-color;
+
+    }
+}
+
+@keyframes closeDisplay{
+    0%{
+        width: 30vw;
+        height: 500px;
+        border-bottom: 0px solid $primary-color;
+
+    }
+    60%{
+        width: 30vw;
+
+        height: 500px;
+        border-bottom: 450px solid $bg-color;
+    }
+    100%{
+        width: 0vw;
+        height: 500px;
+
+        height: 500px;
+        border-bottom: 450px solid $bg-color;
+    }
+}
+
+@mixin header-height() {
+    @media only screen and (max-width: 600px) {
+        height: 60px;
+    }
+    @media only screen and (max-width: 900px) {
+        height: 160px;
+    }
+}
+
+.header {
+    @include header-height;
+}

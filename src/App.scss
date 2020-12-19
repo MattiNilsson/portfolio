@@ -1,0 +1,12 @@
+@import "./styles/variables";
+@import "./styles/nav.scss";
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $bg-color;
+  display:flex;
+  justify-content: center;
+}
