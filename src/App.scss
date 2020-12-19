@@ -1,12 +1,17 @@
 @import "./styles/variables";
 @import "./styles/nav.scss";
+@import "./styles/other/BgSprite.scss";
+@import "./styles/hero.scss";
 
 *{
   box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
 }
 
 body{
   background-color: $bg-color;
   display:flex;
   justify-content: center;
+  overflow-x: hidden;
+  color: #fff;
 }
