@@ -8,7 +8,6 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div className="App">
-      <Nav />
       <Router>
         <Switch>
           <Route to="/" exact component={Home}/>

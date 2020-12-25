@@ -1,0 +1,88 @@
+.mn-navbar{
+    z-index: 5;
+    position: fixed;
+    top: 25vh;
+    right: 20px;
+    width: auto;
+    height: 50vh;
+    .line{
+        width: 6px; 
+        position: absolute;
+        top: 0;
+        left: 35px;
+        pointer-events: none;
+    }
+    .highlight-line{
+        background-color: $primary-color;
+        height: 50%;
+        z-index: 2;
+    }
+    .backdrop-line{
+        background-color: black;
+        border: 2px solid white;
+        height: 100%;
+    }
+
+    .ball-holder{
+        height: 100%;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .ball{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            left: -12px;
+            z-index: 6;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 50%;
+            &.active{
+                background-color: $primary-color;
+                border: 2px solid $primary-color;
+                color: white;
+            }
+            &.inactive{
+                background-color:black;
+                border: 2px solid white;
+                color: white;
+            }
+        }
+
+        .nr{
+            font-size: 130%;
+            position: absolute;
+            left: 7px;
+            top: -1px;
+            pointer-events: none;
+        }
+
+        .section{
+            position: absolute;
+            color: black;
+            left: -100px;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.5s ease;
+            background-color: white;
+            padding: 2px 10px;
+        }
+    }
+    
+    .hitbox{
+        width: 100px;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+        left: -50px;
+        top: 0;
+    }
+    .ball-holder:hover > .ball > .section{
+        left: -150px;
+        opacity: 1;
+    }
+}

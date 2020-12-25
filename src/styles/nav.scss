@@ -9,7 +9,6 @@ $medium: 900px;
     left: 10px;
     z-index: 1;
     position: fixed;
-
         button{
             position: absolute;
             width: 50px;
@@ -18,6 +17,7 @@ $medium: 900px;
             border: none;
             outline: none; 
             cursor: pointer;
+            border: 2px solid black;
         }
 
         .falist{
@@ -39,6 +39,7 @@ $medium: 900px;
             position: absolute;
             top: 0;
             z-index: -1;
+            border: 2px solid black;
         }
     }
 
@@ -62,16 +63,12 @@ $medium: 900px;
             height: 51px;
 
         }
-        60%{
-            border-bottom: 0px solid $primary-color;
-        }
         85%{
             height: 550px;
         }
         100%{
             width: 30vw;
             height: 500px;
-            border-bottom: 10px solid $primary-color;
 
         }
     }
@@ -79,7 +76,7 @@ $medium: 900px;
     @keyframes openBigDisplay{
         0%{
             width: 0px;
-            height: 50px;
+            height: 49px;
             left: 0vw;
         }
         30%{
@@ -87,11 +84,8 @@ $medium: 900px;
         }
         50%{
             width: calc(100vw - 20px);
-            height: 51px;
+            height: 49px;
 
-        }
-        60%{
-            border-bottom: 0px solid $primary-color;
         }
         85%{
             height: 550px;
@@ -99,7 +93,6 @@ $medium: 900px;
         100%{
             width: calc(100vw - 20px);
             height: 500px;
-            border-bottom: 10px solid $primary-color;
 
         }
     }
@@ -133,29 +126,30 @@ $medium: 900px;
             height: 50px;
         }
     }
+
+    @media screen and (min-width: $small) {
+        //do Smth
+            .active{
+                animation: openDisplay 1s;
+                animation-fill-mode: forwards;  
+            }
+            .inactive{
+                animation: closeDisplay 1s;
+                animation-fill-mode: forwards;  
+            }
+      }
+      @media screen and (max-width: $small) {
+          //do Smth
+            .active{
+                animation: openBigDisplay 1s;
+                animation-fill-mode: forwards;  
+            }
+            .inactive{
+                animation: closeBigDisplay 1s;
+                animation-fill-mode: forwards;  
+            }
+        }
 }
 
-  @media screen and (min-width: $small) {
-    //do Smth
-        .active{
-            animation: openDisplay 1s;
-            animation-fill-mode: forwards;  
-        }
-        .inactive{
-            animation: closeDisplay 1s;
-            animation-fill-mode: forwards;  
-        }
-  }
-  @media screen and (max-width: $small) {
-      //do Smth
-        .active{
-            animation: openBigDisplay 1s;
-            animation-fill-mode: forwards;  
-        }
-        .inactive{
-            animation: closeBigDisplay 1s;
-            animation-fill-mode: forwards;  
-        }
-    }
 
 

@@ -1,5 +1,4 @@
 import React, {useRef, useEffect, useState} from "react";
-import { FaList,  FaTimes } from "react-icons/fa";
 
 export default function Nav(){
     const [active, setActive] = useState(false);
@@ -26,7 +25,7 @@ export default function Nav(){
     return(
         <div className="smth">
             <nav ref={myRef} className="nav">
-                <button onClick={() => navClick()}>{active ? <FaTimes className="falist"/> : <FaList className="falist"/>}</button>
+                <button onClick={() => navClick()}>{active ? <div></div> : <div></div>}</button>
                 {active ? <div className="displayNav active"></div> : <div className="displayNav inactive"></div>}
             </nav>
         </div>

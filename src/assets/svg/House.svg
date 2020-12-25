@@ -7,22 +7,20 @@
 <defs>
 	<style>
 		*{
-			animation: color 5s infinite;
+			animation: color 60s linear forwards;
 			pointer-events: none;
+			stroke-dashoffset: 1000;
+			stroke-dasharray: 1000;
+			stroke: black;
+			opacity: 0.8;
 		}
 
 		@keyframes color{
-			0%{
-				stroke:  rgb(32, 161, 112);
-			}
-			50%{
-				stroke: rgb(214, 98, 189);
-			}
-			100%{
-				stroke:  rgb(32, 161, 112);
+			to{
+				stroke-dashoffset: 0;
 			}
 		}
-
+		
 	</style>
 </defs>
 

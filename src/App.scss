@@ -2,16 +2,18 @@
 @import "./styles/nav.scss";
 @import "./styles/other/BgSprite.scss";
 @import "./styles/hero.scss";
+@import "./styles/other/SectionPicker.scss";
+@import "./styles/sections/about/about.scss";
+@import "./styles/sections/about/aboutcard.scss";
 
 *{
   box-sizing: border-box;
-  font-family: 'Dosis', sans-serif;
 }
 
 body{
-  background-color: $bg-color;
+  background-color: white;
   display:flex;
   justify-content: center;
   overflow-x: hidden;
-  color: #fff;
+  color: black;
 }

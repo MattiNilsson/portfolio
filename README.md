@@ -4,7 +4,7 @@
 * sanity.io
 * react-router-dom
 * sass
-* react-icons
+* material-ui/icons
 
 # Getting Started with Create React App
 

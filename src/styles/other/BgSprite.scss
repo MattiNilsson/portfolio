@@ -1,6 +1,14 @@
 .bgSprite{
-    width: 100vw;
+    width: 1920px;
     pointer-events: none;
-    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: calc(50vw - 960px);
+}
+
+@media screen and (max-width: 600px) {
+    .bgSprite{
+        display: none;
+    }
 }
 

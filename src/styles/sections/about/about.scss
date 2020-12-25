@@ -1,0 +1,43 @@
+.about-section{
+    margin-top: 70vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    .clouds-container{
+        width: 100vw;
+        display:flex;
+        overflow:hidden;
+    }
+    .clouds{
+        position: relative;
+        width: 100%;
+        animation: cloudsAnim 20s infinite linear; 
+    }
+    .rotate{
+
+        transform: rotateX(180deg);
+    }
+    h1{
+        text-align: center;
+        font-size: 300%;
+        margin-top: 0;
+    }
+    .card-holder{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+        width: 70vw;
+
+    }
+}
+
+@keyframes cloudsAnim{
+    from{
+        left: 0;
+    }
+    to{
+        left: -100%;
+    }
+}
